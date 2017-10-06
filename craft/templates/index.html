@@ -1,0 +1,50 @@
+{#
+ # Homepage template
+ # ---------------
+ #}
+
+{% extends '_layout/main-layout.html' %}
+
+{% block content %}
+	<h1>{{ entry.title }}</h1>
+
+	{{ entry.body }}
+
+	<h2>Recent News</h2>
+	<ul>
+		{% for entry in craft.entries.section('news').limit(5).find() %}
+			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+		{% endfor %}
+	</ul>
+	{% set paintings = [
+	{ 'title': 'ONE' },{ 'title': 'TWO' },{ 'title': 'THREE' },{ 'title': 'FOUR' },{ 'title': 'FIVE' },{ 'title': 'SIX' },{ 'title': 'SEVEN' }]	%}
+<div class="container">
+	
+<div class="columns is-multiline has--padding">
+	{% for painting in paintings %}
+	<div class="column is-3">
+		<a href="#" class="img__link">
+		<figure class="paintings__grid-item">
+			<div data-aspect-ratio="1:1">
+					{# <img src="http://placehold.it/400x300" alt=""> #}
+				<div class="center--cover">
+				{% include './_components/image-svg.twig' with {'height':"100%"} only %}
+				</div>
+			</div>
+	{# 		<figcaption class="img__caption">
+				<span class="img__caption-title">{{painting.title}}</span>
+			</figcaption> #}
+		</figure>
+	</div>
+		</a>
+	{% endfor %}
+</div>
+</div>
+
+
+	
+
+
+
+
+{% endblock %}

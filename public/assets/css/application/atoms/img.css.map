@@ -1,0 +1,1 @@
+{"version":3,"sources":["application/atoms/img.scss"],"names":[],"mappings":"AACC;EACC,eAAc;EACd,mBAAkB;EAClB,iBAAgB,EAChB;;AACD;EACC,eAAa,EACb","file":"img.css","sourcesContent":[".img{\n\t&__caption {\n\t\tline-height: 2;\n\t\ttext-align: center;\n\t\tfont-weight: 100;\n\t}\n\t&__link, &__link:hover {\n\t\tcolor:initial;\n\t}\n}\n\n"]}

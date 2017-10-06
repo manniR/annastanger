@@ -1,0 +1,7 @@
+.img__caption {
+  line-height: 2;
+  text-align: center;
+  font-weight: 100; }
+
+.img__link, .img__link:hover {
+  color: initial; }

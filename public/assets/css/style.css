@@ -1,0 +1,946 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body,
+.sg-body {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word; }
+
+/*
+  FontFaces
+
+  Styleguide 1.7
+*/
+/*
+  Base Styles
+
+  Styleguide 1
+*/
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: transparent;
+  box-sizing: border-box;
+  font-size: 80%; }
+  @media screen and (min-width: 768px) {
+    html {
+      font-size: 85%; } }
+  @media screen and (min-width: 960px) {
+    html {
+      font-size: 90%; } }
+  @media screen and (min-width: 1180px) {
+    html {
+      font-size: 100%; } }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html,
+body {
+  min-height: 100%; }
+
+body,
+.sg-body {
+  margin: 0;
+  position: relative;
+  color: #242424;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  background-color: #f8f8f8; }
+
+abbr, acronym, code, dir, kbd,
+listing, plaintext, q, samp, tt, var, xmp {
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul {
+  margin-top: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+audio, progress, canvas, video {
+  display: inline-block; }
+
+body, button, input, select, textarea, .sg-body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+select, option, button, a, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer; }
+
+[hidden], template {
+  display: none; }
+
+/*
+  Typosizes
+
+  A definition of all fontsizes (classes and tags)
+
+  Styleguide 1.1
+*/
+/*
+  Main Heading Style
+
+  markup:
+  <h1>Lorem Ipsum it dolor</h1>
+  <h3>Lorem Ipsum it dolor</h3>
+
+  Styleguide 1.1.1
+*/
+.h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 {
+  text-rendering: optimizeLegibility;
+  margin-bottom: 0rem;
+  color: #636363; }
+
+/*
+  h1
+
+  markup:
+  <h1>Lorem Ipsum it dolor</h1>
+  <p class="h1">Lorem Ipsum it dolor</p>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.1.2
+*/
+.h1, h1 {
+  font-size: 2.25rem;
+  line-height: 1;
+  margin-bottom: 0.625rem; }
+
+/*
+  h2
+
+  markup:
+  <h2>Lorem Ipsum it dolor</h2>
+  <p class="h2">Lorem Ipsum it dolor</p>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.1.3
+*/
+.h2, h2 {
+  font-size: 2rem;
+  line-height: 2.48rem;
+  margin-bottom: 0.625rem; }
+
+/*
+  h3
+
+  markup:
+  <h3>Lorem Ipsum it dolor</h3>
+  <p class="h3">Lorem Ipsum it dolor</p>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.1.4
+*/
+.h3, h3 {
+  font-size: 1.8125rem;
+  line-height: 2.2475rem;
+  margin-bottom: 0.625rem; }
+
+/*
+  h4
+
+  markup:
+  <h4>Lorem Ipsum it dolor</h4>
+  <p class="h4">Lorem Ipsum it dolor</p>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.1.5
+*/
+.h4, h4 {
+  font-size: 1.5625rem;
+  line-height: 1.9375rem;
+  margin-bottom: 0.625rem; }
+
+/*
+  h5
+
+  markup:
+  <h5>Lorem Ipsum it dolor</h5>
+  <p class="h5">Lorem Ipsum it dolor</p>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.1.6
+*/
+.h5, h5 {
+  font-size: 1.375rem;
+  line-height: 1.705rem;
+  margin-bottom: 0.625rem; }
+
+/*
+  h6
+
+  markup:
+  <h6>Lorem Ipsum it dolor</h6>
+  <p class="h6">Lorem Ipsum it dolor</p>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.1.7
+*/
+.h6, h6 {
+  font-size: 1.1875rem;
+  line-height: 1.4725rem;
+  margin-bottom: 0.625rem; }
+
+/*
+  Typostyles and Elements
+
+  Styleguide 1.2
+*/
+/*
+  Header-Stack
+
+  Group Wrapper for Headlines
+
+  markup:
+  <header class="header-stack">
+    <h1>Main Headline</h1>
+    <h2 class="h4">Subheadline</h2>
+  </header>
+
+  Styleguide 1.2.1
+*/
+.header-stack {
+  margin-bottom: 0rem; }
+  .header-stack > * {
+    margin-bottom: 0; }
+  p + .header-stack {
+    margin-top: 1.5625rem; }
+
+/*
+  Paragraph
+
+  Style for Texts
+
+  markup:
+  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.2.2
+*/
+p {
+  margin-bottom: 1.25rem; }
+  p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+    margin-top: 2.25rem; }
+
+/*
+  Links
+
+  Style for Text Links
+
+  markup:
+  <a href="#">This is a link</a>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.2.3
+*/
+a {
+  outline: 0;
+  line-height: inherit;
+  background: transparent;
+  color: #29b8f2;
+  text-decoration: none; }
+  a:hover, a.link-hover {
+    color: #0c8ec3;
+    text-decoration: none; }
+  a:active, a.is-active {
+    color: #096b93; }
+  a:hover, a:active, a:focus {
+    outline: 0; }
+
+/*
+  Strong
+
+  Bold Style for Texts
+
+  markup:
+  <p><strong>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</strong> sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.2.4
+*/
+strong {
+  font-weight: bold; }
+
+/*
+  Italic
+
+  Italic Style for Texts
+
+  markup:
+  <p><em>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</em> sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.2.5
+*/
+em, dfn {
+  font-style: italic; }
+
+/*
+  Abbr
+
+  markup:
+  <abbr>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</abbr>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.2.6
+*/
+abbr {
+  font-variant: small-caps;
+  text-transform: lowercase; }
+  abbr[title] {
+    border-bottom: 1px dotted; }
+    abbr[title]:hover {
+      cursor: help; }
+
+/*
+  Hightlight, Mark
+
+  For Highlightning text passages, also for hightlightning with mouse select
+
+  markup:
+  <p><mark>Lorem ipsum dolor sit amet</mark>, consetetur sadipscing elitr</p>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.2.7
+*/
+mark, .hightlight, ::-moz-selection {
+  background: #a1e0f9; }
+mark, .hightlight, ::selection {
+  background: #a1e0f9; }
+
+/*
+  Lists
+
+  Styles for Unordered, Ordered and Definition Lists. If a `<ul>` or `<dl>` is wrapped in a `<nav>`, the list got an neutral style.
+
+  markup:
+  <ul>
+    <li>List Entry</li>
+    <li>List Entry</li>
+    <li>List Entry</li>
+  </ul>
+  <ol>
+    <li>List Entry</li>
+    <li>List Entry</li>
+    <li>List Entry</li>
+  </ol>
+  <dd>
+    <dt>List Entry</dt>
+    <dd>List Entry</dd>
+  </dd>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.2.8
+*/
+ul, dl {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 1.25rem; }
+  nav ul, nav dl {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0; }
+
+ol {
+  padding-left: 22px;
+  margin-bottom: 1.25rem; }
+
+li > ul, li > ol {
+  margin-bottom: 0; }
+
+dt > dl, dd > dl {
+  margin-bottom: 0; }
+
+/*
+  Hairline
+
+  markup:
+  <hr>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.2.9
+*/
+hr {
+  margin-bottom: 1.25rem;
+  height: 1px;
+  border-left: 0;
+  border-bottom: 0;
+  border-right: 0;
+  border-top: 1px dashed #eeeeee;
+  position: relative;
+  margin-top: 1.25rem; }
+
+/*
+  Code
+
+  For write some code snippets
+
+  markup:
+  <code>
+    <pre>
+      <div>some Code</div>
+    </pre>
+  <code>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.2.10
+*/
+code, kbd, pre, samp {
+  font-weight: normal;
+  font-family: "Inconsolata", "DejaVu Sans Mono", Menlo, Monaco, Consolas, Courier, monospace; }
+
+pre {
+  white-space: pre;
+  margin-bottom: 1.25rem; }
+  pre > code {
+    word-wrap: normal;
+    white-space: pre-wrap; }
+
+code {
+  white-space: pre; }
+
+/*
+  Quotes
+
+  markup:
+  <q>Say something</q>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.2.11
+*/
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+  q:before, q:after {
+    content: '';
+    content: none; }
+
+/*
+  Small Fonts
+
+  Some Styles for Smaller Texts
+
+  markup:
+  <small>Small Text</small><br>
+  <sup>Superposition</sup><br>
+  <sub>Subposition</sub>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.2.12
+*/
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+i {
+  font-style: normal;
+  display: inline-block; }
+
+/*
+  Blockquotes
+
+  Simple Style for Blockquotes
+
+  markup:
+  <blockquote>
+    <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    <cite>Author from Lorem Ipsum</cite>
+  </blockquote>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.2.13
+*/
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1.25rem; }
+  blockquote p {
+    font-size: 1.125rem;
+    line-height: 1.6875rem; }
+  blockquote cite {
+    font-style: normal;
+    font-size: 0.9375rem;
+    line-height: 1.3125rem; }
+    blockquote cite:before {
+      content: '\2014 \0020'; }
+  blockquote *:last-child {
+    margin-bottom: 0; }
+
+blockquote, q, cite {
+  font-style: italic;
+  color: #242424; }
+
+/*
+  Base Media Elements
+
+  Styleguide 1.3
+*/
+/*
+  Image
+
+  Base Style for Images. Images without `height` and `width` are fluid, to there max-width.
+
+  markup:
+  <img src="http://lorempixel.com/400/200/cats"><br>
+  <img src="http://lorempixel.com/400/200/cats" height="300" width="200">
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.3.1
+*/
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto; }
+  img[width], img[height] {
+    max-width: none; }
+
+/*
+  Figure
+
+  Is a container for Images, all images inside `<figure>` fill the complete space.
+
+  markup:
+  <figure><img src="http://lorempixel.com/500/400/cats"></figure>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.3.2
+*/
+figure {
+  margin: 0; }
+  figure img {
+    display: block;
+    max-width: none;
+    width: 100%; }
+
+/*
+  Map
+
+  Simple Wrapper to remove `max-width` from embed google Maps
+
+  markup:
+  <div class="map_canvas"><iframe...></div>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.3.3
+*/
+#map_canvas img, #map_canvas embed, #map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+/*
+  Video
+
+  Make Video Elements Fluid
+
+  markup:
+  <video></video>
+
+  sg-wrapper:
+  <div class="sg-body" style="height: 0; overflow: hidden;">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.3.4
+*/
+video {
+  width: 100% !important;
+  height: auto !important; }
+
+/*
+  Base Form Elements
+
+  Styleguide 1.4
+*/
+/*
+  Fieldset
+
+  markup:
+  <fieldset>Lorem Ipsum</fieldset>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.4.1
+*/
+fieldset {
+  border: 0;
+  padding: 0; }
+
+/*
+  Legend
+
+  markup:
+  <legend>Lorem Ipsum</legend>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.4.2
+*/
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal; }
+
+/*
+  Input
+
+  markup:
+  <input type="text" placeholder="Some Values...">
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.4.3
+*/
+input {
+  line-height: normal; }
+  input:focus {
+    outline: 0; }
+
+/*
+  Buttons, Selects, Inputs
+
+  markup:
+  <button>Button</button><br>
+  <input type="submit" value="Submit"><br>
+  <input type="reset" value="Reset"><br>
+  <input type="checkbox" value="1"><br>
+  <input type="radio" value="1"><br>
+  <input type="search" value="1"><br>
+
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.4.4
+*/
+button, optgroup, input, select, textarea {
+  font-size: inherit;
+  margin: 0;
+  color: inherit; }
+
+button {
+  line-height: normal;
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: none; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+button:focus {
+  outline: none; }
+
+/*
+  Textarea
+
+  markup:
+  <textarea name="" id="" cols="30" rows="10"></textarea>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.4.5
+*/
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+/*
+  Table Elements
+
+  Styleguide 1.5
+*/
+/*
+  Table
+
+  markup:
+  <table>
+    <tr>
+      <th>Table</th>
+      <th>Head</th>
+    <tr>
+    <tr>
+      <td>Table</td>
+      <td>Cell</td>
+    </tr>
+  </table>
+
+  sg-wrapper:
+  <div class="sg-body">
+    <sg-wrapper-content/>
+  </div>
+
+  Styleguide 1.5.1
+*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.img__caption {
+  line-height: 2;
+  text-align: center;
+  font-weight: 100; }
+
+.img__link, .img__link:hover {
+  color: initial; }
+
+[data-aspect-ratio] {
+  display: block;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden; }
+  [data-aspect-ratio]:before {
+    content: '';
+    display: block; }
+  [data-aspect-ratio] > * {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+  [data-aspect-ratio] > .center--contain {
+    left: 50%;
+    top: 50%;
+    height: auto;
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  [data-aspect-ratio] > .center--cover {
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+[data-aspect-ratio="3:1"]:before {
+  padding-top: 33.33%; }
+
+[data-aspect-ratio="2:1"]:before {
+  padding-top: 50%; }
+
+[data-aspect-ratio="16:9"]:before {
+  padding-top: 56.25%; }
+
+[data-aspect-ratio="3:2"]:before {
+  padding-top: 66.66%; }
+
+[data-aspect-ratio="4:3"]:before {
+  padding-top: 75%; }
+
+[data-aspect-ratio="1:1"]:before {
+  padding-top: 100%; }
+
+[data-aspect-ratio="3:4"]:before {
+  padding-top: 133.33%; }
+
+[data-aspect-ratio="2:3"]:before {
+  padding-top: 150%; }
+
+[data-aspect-ratio="9:16"]:before {
+  padding-top: 177.77%; }
+
+[data-aspect-ratio="1:2"]:before {
+  padding-top: 200%; }
+
+[data-aspect-ratio="1:3"]:before {
+  padding-top: 300%; }
+
+.columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .columns.is-multiline {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .columns.has--padding {
+    margin: -0.75em; }
+    .columns.has--padding > .column {
+      padding: 0.75em; }
+
+.column {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1 1 0%; }
+  .column.is-3 {
+    width: 33.33333%;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none; }
+  .column.is-2 {
+    width: 16.66667%;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none; }
+  .column.is-12 {
+    width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none; }
