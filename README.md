@@ -1,1 +1,2 @@
-# Anna Stanger 
+# Anna Stanger - Portfolio  
+Craft based 
