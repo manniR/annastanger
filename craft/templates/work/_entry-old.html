@@ -1,0 +1,65 @@
+{#
+ # Paintings entry template
+ # -------------------
+ #
+ # This template gets loaded whenever a Paintings entry’s URL is
+ # requested. That’s because the Paintings section’s Template setting is
+ # set to “Paintings/_entry”, the path to this template.
+ #
+ # When this template is loaded, it will already have an ‘entry’
+ # variable, set to the requested Paintings entry.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+ {% extends "_layout/main-layout.html" %}
+
+ {% block content %}
+     <div class="o-media">
+         <div class="o-grid o-grid--rev o-grid--gutter-x4">
+             <div class="o-grid__col u-1/2@sm u-mb-x4">
+                 <h1 class="o-type-28 u-mb-x3">{{ entry.title }}</h1>
+                 {#<p class="o-type-16 u-lh-2">Posted on {{ entry.postDate.format('F d, Y') }}</p>#}
+                 <p class="o-type-16 u-lh-2">{{ entry.body }}</p>
+             </div>
+             <div class="o-grid__col u-1/2@sm">
+                 {% for myAsset in entry.images %}
+                     <img src="{{ myAsset.url('tablet') }}" alt="{{ myAsset.title }}" class="u-mb-x4">
+                 {% endfor %}
+             </div>
+         </div>
+     </div>
+
+     {% set criteria = {section: 'work'} %}
+     {% set prev = entry.getPrev(criteria) %}
+     {% set next = entry.getNext(criteria) %}
+
+
+     <div class="o-media o-media--middle u-mv-x4">
+         <div class="o-media__fixed u-text-left">
+             <a  href="{{ url('work') }}" class="c-link">Back to Work</a>
+         </div>
+         <div class="o-media__fluid u-text-right">
+
+                 <ul class="o-list o-list--inline o-list--gutter-x4">
+                     <li class="o-list__item"></li>
+
+                     <li class="o-list__item">
+
+                         <a href="{% if prev %}{{prev.url}}{% endif %}" class="c-link {% if not prev %}c-link--disabled{% endif %}">previous</a>
+                     </li>
+
+
+                     <li class="o-list__item">
+                         <a  href="{% if next %}{{ next.url  }}{% endif %}" class="c-link {% if not next  %}c-link--disabled{% endif %}">next</a>
+                     </li>
+
+                 </ul>
+
+         </div>
+         </div>
+
+
+    {% include('work/work-grid.html') %}
+ {% endblock %}

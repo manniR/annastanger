@@ -1,0 +1,12 @@
+<div class="o-grid o-grid--gutter-x4">
+    <div class="o-grid__col u-1/2@sm u-mb-x4">
+        <h1 class="o-type-28 u-mb-x3">{{ entry.title }}</h1>
+        {#<p class="o-type-16 u-lh-2">Posted on {{ entry.postDate.format('F d, Y') }}</p>#}
+        <p class="o-type-16 u-lh-2">{{ entry.body }}</p>
+    </div>
+    <div class="o-grid__col u-1/2@sm">
+        {% for myAsset in entry.images %}
+            <img src="{{ myAsset.url('thumb') }}" alt="{{ myAsset.title }}" class="u-mb-x4">
+        {% endfor %}
+    </div>
+</div>

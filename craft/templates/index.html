@@ -6,45 +6,19 @@
 {% extends '_layout/main-layout.html' %}
 
 {% block content %}
-	<h1>{{ entry.title }}</h1>
-
-	{{ entry.body }}
-
-	<h2>Recent News</h2>
-	<ul>
-		{% for entry in craft.entries.section('news').limit(5).find() %}
-			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-		{% endfor %}
-	</ul>
-	{% set paintings = [
-	{ 'title': 'ONE' },{ 'title': 'TWO' },{ 'title': 'THREE' },{ 'title': 'FOUR' },{ 'title': 'FIVE' },{ 'title': 'SIX' },{ 'title': 'SEVEN' }]	%}
-<div class="container">
-	
-<div class="columns is-multiline has--padding">
-	{% for painting in paintings %}
-	<div class="column is-3">
-		<a href="#" class="img__link">
-		<figure class="paintings__grid-item">
-			<div data-aspect-ratio="1:1">
-					{# <img src="http://placehold.it/400x300" alt=""> #}
-				<div class="center--cover">
-				{% include './_components/image-svg.twig' with {'height':"100%"} only %}
+	<div class="o-grid">
+        {% for entry in craft.entries.section('work').find() %}
+            {% set featuredImage = entry.images.first() %}
+            {% if featuredImage %}
+				<div class="o-grid__col u-1/2 u-1/3@sm">
+					<div class="c-card c-card--aspect-1:1">
+						<a href="{{ entry.getUrl() }}" class="c-link">
+							<img src="{{ featuredImage.getUrl('thumb') }}" alt="{{ featuredImage.title }}">
+						</a>
+					</div>
 				</div>
-			</div>
-	{# 		<figcaption class="img__caption">
-				<span class="img__caption-title">{{painting.title}}</span>
-			</figcaption> #}
-		</figure>
+            {% endif %}
+        {% endfor %}
 	</div>
-		</a>
-	{% endfor %}
-</div>
-</div>
-
-
-	
-
-
-
-
 {% endblock %}
+

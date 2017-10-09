@@ -1,0 +1,18 @@
+{#
+ # Work index template
+ # -------------------
+ #
+ # This template is loaded whenever http://example.com/Paintings is
+ # requested, because it is located at Paintings/index.html in your
+ # craft/templates/ folder.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout/main-layout.html" %}
+{% set title = "Works" %}
+
+{% block content %}
+    {% include('work/work-grid.html') %}
+{% endblock %}

@@ -11,7 +11,7 @@ return array(
     'useEmailAsUsername' => false,
     'limitAutoSlugsToAscii' => true,
     'generateTransformsBeforePageLoad' => true,
-    'addTrailingSlashesToUrls' => true,
+    'addTrailingSlashesToUrls' => false,
     'defaultWeekStartDay' => 1,
     'sendPoweredByHeader' => false,
     'cooldownDuration' => 0,

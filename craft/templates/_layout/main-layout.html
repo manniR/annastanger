@@ -15,29 +15,65 @@
 
 
 <body>
-	<div id="container">
-		<header id="header">
-			<h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
-			<nav>
-				<ul>
-					<li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>News</a></li>
-				</ul>
-			</nav>
-		</header>
+    <header id="header" class="u-pv-x7">
+        <div class="o-container o-container--size-small">
+            <div class="o-media o-media--middle o-media--res">
+                <div class="o-media__fixed u-text-center u-text-left@sm">
+                    <h1 class="o-type-48 u-uppercase">
+                        <a href="{{ siteUrl }}" class="c-link">{{ siteName }}
+                        <span class="o-type-28 u-block u-lowercase u-weight-normal u-mt-x2">graphic. design. art.</span>
+                        </a>
+                    </h1>
+                </div>
+                <div class="o-media__fluid u-text-center u-text-right@sm u-mt-x7 u-mt-x0@sm">
+                    <nav>
+                        <ul class="o-list o-list--inline o-list--gutter-x4 u-uppercase">
+                            <li class="o-list__item">
+                                <a  href="{{ url('work') }}"
+                                    class="c-link{% if craft.request.firstSegment == 'work' %} active{% endif %}">
+                                    Work
+                                </a>
+                            </li>
+                            <li class="o-list__item">
+                                <a  href="{{ url('about') }}"
+                                    class="c-link{% if craft.request.firstSegment == 'about' %} active{% endif %}">
+                                    About
+                                </a>
+                            </li>
+                            <li class="o-list__item">
+                                <a  href="{{ url('contact') }}"
+                                    class="c-link{% if craft.request.firstSegment == 'contact' %} active{% endif %}">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
 
-		<main id="content" role="main">
-			{% block content %}
-				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-			{% endblock %}
-		</main>
+    <main id="content" role="main" class="u-vp-x7">
+        <div class="o-container o-container--size-small">
+        {% block content %}
+            <p>If you see me, you haven’t set your
+                <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+            <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template
+                    Inheritance</a> documentation for an explanation.</p>
+        {% endblock %}
+        </div>
+    </main>
 
-		<footer id="footer">
-			Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}. All rights reserved  •  Built with <a href="http://craftcms.com">Craft</a>
-		</footer>
-	</div>
+    <footer id="footer">
+        <div class="o-container o-container--size-small u-mv-x7">
+            <div class="u-text-center o-type-11 ">
+                <p>© {{ now.year }} - Anna Stanger</p>
+            </div>
+        </div>
+    </footer>
 
-	{# Adding the Document Footer #}
-	{% include '_parts/document-footer.html' %}
+
+{# Adding the Document Footer #}
+{% include '_parts/document-footer.html' %}
 </body>
 </html>
