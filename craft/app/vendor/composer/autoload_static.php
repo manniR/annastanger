@@ -4,12 +4,16 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit128e0ec709329267f517e81cae5e53f6
+class ComposerStaticInitd06455e96d82460404a5e42d4000a1b7
 {
     public static $prefixLengthsPsr4 = array (
         'l' => 
         array (
             'lsolesen\\pel\\' => 13,
+        ),
+        'e' => 
+        array (
+            'enshrined\\svgSanitize\\' => 22,
         ),
         'S' => 
         array (
@@ -21,6 +25,10 @@ class ComposerStaticInit128e0ec709329267f517e81cae5e53f6
         'lsolesen\\pel\\' => 
         array (
             0 => __DIR__ . '/..' . '/lsolesen/pel/src',
+        ),
+        'enshrined\\svgSanitize\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/enshrined/svg-sanitize/src',
         ),
         'Symfony\\Component\\EventDispatcher\\' => 
         array (
@@ -632,6 +640,11 @@ class ComposerStaticInit128e0ec709329267f517e81cae5e53f6
         'Twig_Util_TemplateDirIterator' => __DIR__ . '/..' . '/twig/twig/lib/Twig/Util/TemplateDirIterator.php',
         'Yii' => __DIR__ . '/..' . '/yiisoft/yii/framework/yii.php',
         'YiiBase' => __DIR__ . '/..' . '/yiisoft/yii/framework/YiiBase.php',
+        'enshrined\\svgSanitize\\Sanitizer' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/Sanitizer.php',
+        'enshrined\\svgSanitize\\data\\AllowedAttributes' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/AllowedAttributes.php',
+        'enshrined\\svgSanitize\\data\\AllowedTags' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/AllowedTags.php',
+        'enshrined\\svgSanitize\\data\\AttributeInterface' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/AttributeInterface.php',
+        'enshrined\\svgSanitize\\data\\TagInterface' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/TagInterface.php',
         'lsolesen\\pel\\Pel' => __DIR__ . '/..' . '/lsolesen/pel/src/Pel.php',
         'lsolesen\\pel\\PelConvert' => __DIR__ . '/..' . '/lsolesen/pel/src/PelConvert.php',
         'lsolesen\\pel\\PelDataWindow' => __DIR__ . '/..' . '/lsolesen/pel/src/PelDataWindow.php',
@@ -679,10 +692,10 @@ class ComposerStaticInit128e0ec709329267f517e81cae5e53f6
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit128e0ec709329267f517e81cae5e53f6::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit128e0ec709329267f517e81cae5e53f6::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit128e0ec709329267f517e81cae5e53f6::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit128e0ec709329267f517e81cae5e53f6::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd06455e96d82460404a5e42d4000a1b7::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd06455e96d82460404a5e42d4000a1b7::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitd06455e96d82460404a5e42d4000a1b7::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitd06455e96d82460404a5e42d4000a1b7::$classMap;
 
         }, null, ClassLoader::class);
     }
